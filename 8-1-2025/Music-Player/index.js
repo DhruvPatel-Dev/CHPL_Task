@@ -22,35 +22,14 @@ const songsDetails = [
     }
 ]
 
-prevButton.addEventListener('click',()=>{
-if(track==0)
-{
- img.src = songsDetails[2].image
- audio.src=songsDetails[2].song
- track=2
+prevButton.addEventListener('click',()=>{prevNextControl("prev")})
+nextButton.addEventListener('click',()=>{prevNextControl("next")})
+
+function prevNextControl (change)
+{  
+   let index = change=='prev'? -1 :+1
+    img.src = songsDetails[(track+index)%3].image
+    audio.src = songsDetails[(track+index)%3].song
+    track = (track + index)%3
+   
 }
-else
-{   
-    img.src = songsDetails[track-1].image
-    audio.src=songsDetails[track-1].song
-    track-- 
-}
-})
-
-
-nextButton.addEventListener('click',()=>{
-
-    if(track==2)
-    {
-        img.src=songsDetails[0].image;
-        audio.src=songsDetails[0].song;
-        track=0
-    }
-    else
-    {
-        img.src=songsDetails[track+1].image;
-        audio.src=songsDetails[track+1].song;
-        track++
-    }
-
-})
