@@ -2,7 +2,7 @@ const img = document.getElementsByTagName('img')
 const p1btn = document.getElementsByTagName('button')[0]
 const p2btn = document.getElementsByTagName('button')[1]
 const msg = document.getElementById('message')
-let p1 
+let p1
 let p2
 let flag=false
 p1btn.addEventListener('click',()=>{rollTheDice(0)})
@@ -19,7 +19,6 @@ function rollTheDice(p)
        if(flag)
         {
          showWinner(p1,p2)
-
         }
         flag=true
     }
@@ -31,14 +30,13 @@ function rollTheDice(p)
             {
              showWinner(p1,p2)
             }
-            flag=true
-        
+        flag=true 
     }
 }
 
 function showWinner(p1,p2)
 {
-    if(p1===p2)
+  if(p1===p2)
     {
   msg.innerText='Draw!!!!'
     }
@@ -61,7 +59,8 @@ function restartGame()
   img[0].src = `./image/1.png`
   img[1].src = `./image/1.png`
   msg.innerText=''
-
+  p1btn.disabled=false
+  p2btn.disabled=false
 }
 
 

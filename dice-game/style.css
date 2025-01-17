@@ -1,7 +1,6 @@
 #container{
     height: 300px;
     width: 400px;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -20,4 +19,13 @@ button{
     margin: auto;
     margin-top: 20px;
     border-radius:5px;
+}
+#msg
+{
+    display: flex;
+    justify-items: center;
+}
+#main{
+    border: 2px solid black;
+    
 }
