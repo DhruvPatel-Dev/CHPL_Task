@@ -1,0 +1,60 @@
+body{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    background-color: black;
+}
+.container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: cursive;
+}
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+button {
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+}
+#add{ 
+    background-color:green;
+    border-radius: 10px;
+    border: none;
+}
+
+.deletebtn{
+ background-color: red;
+ border-radius: 30%;
+ border: none;
+ 
+}
+.editbtn{
+    background-color: blue;
+ border-radius: 30%;
+ border: none;
+}
+.notes{
+    margin: 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap:20px
+    
+}
