@@ -8,12 +8,13 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-startBtn.addEventListener('click', ()=>{  
- startGame()
-})
+
+startBtn.addEventListener('click',startGame)
+
 allBoxes.forEach(box =>{
   box.addEventListener('click',()=>boxClicked(box))
 })
+
 function checkAnswer(currentLevel) {
 
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
@@ -21,6 +22,7 @@ function checkAnswer(currentLevel) {
         setTimeout(nextSequence,500);
       }
     } else {
+        
        document.body.classList.add('game-over')
        levelStatus.innerText ='Game Over, Press Button to Restart' 
       setTimeout( ()=> {
@@ -45,7 +47,7 @@ function animatePress(currentColor) {
   document.getElementById(`${currentColor}`).classList.add('pressed')
   setTimeout( ()=> {
    document.getElementById(`${currentColor}`).classList.remove('pressed')
-  }, 100);
+  },100);
 }
 function restartGame() {
   level = 0;
@@ -61,7 +63,7 @@ function startGame(){
 }
 function boxClicked(box)
 {
-  userClickedPattern.push(box.id );
+  userClickedPattern.push(box.id);
   animatePress(box.id);
   checkAnswer(userClickedPattern.length-1);
 }
